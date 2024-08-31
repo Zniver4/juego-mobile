@@ -439,6 +439,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1995009692}
+    - targetCorrespondingSourceObject: {fileID: 1248598967819147742, guid: c4cad50aa03bbca42938fe318344950b,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1995009693}
   m_SourcePrefab: {fileID: 100100000, guid: c4cad50aa03bbca42938fe318344950b, type: 3}
 --- !u!1 &1995009688 stripped
 GameObject:
@@ -508,6 +512,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roadSection: {fileID: 8408036835372236224, guid: 62692f61b7100e245ae2c822224c2a4a,
     type: 3}
+--- !u!114 &1995009693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995009688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c26b01365a500643bd62841508976e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidad: 2
 --- !u!1 &2047389306
 GameObject:
   m_ObjectHideFlags: 0
