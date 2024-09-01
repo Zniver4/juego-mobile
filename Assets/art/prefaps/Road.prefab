@@ -4176,8 +4176,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4301620308188193099}
-  - component: {fileID: 3651780722446146244}
   - component: {fileID: 4573451197021201596}
+  - component: {fileID: 7022935005177746746}
   m_Layer: 0
   m_Name: Road
   m_TagString: Untagged
@@ -4205,18 +4205,6 @@ Transform:
   - {fileID: 5222422680857444971}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3651780722446146244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4067554231347687939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89504aa46c7f98644b5f7895f7a34d83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &4573451197021201596
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4244,6 +4232,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &7022935005177746746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4067554231347687939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33d34e5fb1e10c84898ff0ca66e1cd67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidad: 10
 --- !u!1 &4180934783577077429
 GameObject:
   m_ObjectHideFlags: 0
