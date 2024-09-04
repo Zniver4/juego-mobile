@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
-    public float velocidad = 2f; // Velocidad de movimiento
+    public float velocidad = 25f; // Velocidad de movimiento
 
     void Update()
     {

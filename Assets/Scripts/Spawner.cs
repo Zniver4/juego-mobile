@@ -35,29 +35,11 @@ public class PrefabSpawner : MonoBehaviour
         // Instanciar el prefab en la posición determinada
         currentObject = Instantiate(prefabToSpawn, spawnPosition.position, spawnPosition.rotation);
 
-        // Mover el prefab instanciado
-        StartCoroutine(MovePrefab(currentObject));
-
         // Llamar a SpawnObject nuevamente después de un intervalo de tiempo
         Invoke("SpawnObject", spawnInterval);
     }
-
-    IEnumerator MovePrefab(GameObject instance)
-    {
-        float duration = 5.0f; // Duración del movimiento en segundos
-        Vector3 startPosition = instance.transform.position;
-        Vector3 endPosition = new Vector3(0, 0, 10); // Nueva posición, ajusta según tus necesidades
-
-        float elapsedTime = 0;
-        while (elapsedTime < duration)
-        {
-            instance.transform.position = Vector3.Lerp(startPosition, endPosition, (elapsedTime / duration));
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
-        instance.transform.position = endPosition;
-    }
 }
+
 
 
 
