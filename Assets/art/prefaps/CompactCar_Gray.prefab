@@ -338,6 +338,7 @@ GameObject:
   - component: {fileID: 2995164600301443818}
   - component: {fileID: -4830460639738490543}
   - component: {fileID: 1277983551154556095}
+  - component: {fileID: 4631451231902475313}
   m_Layer: 0
   m_Name: CompactCar_Gray
   m_TagString: Car
@@ -404,6 +405,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4631451231902475313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2995164600301602506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddf362198004a90489439c8d0c0357cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 6502439451784493806, guid: 6c76c521fa780664ba8da0e758fa0c66, type: 3}
+  detectionRadius: 5
+  points: 10
 --- !u!1 &2995164600301602508
 GameObject:
   m_ObjectHideFlags: 0

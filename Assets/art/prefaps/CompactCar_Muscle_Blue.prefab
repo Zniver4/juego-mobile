@@ -338,6 +338,7 @@ GameObject:
   - component: {fileID: 4038702029857767545}
   - component: {fileID: 1072936818337246885}
   - component: {fileID: -7059822529794227727}
+  - component: {fileID: -4334874068440388583}
   m_Layer: 0
   m_Name: CompactCar_Muscle_Blue
   m_TagString: Car
@@ -405,6 +406,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-4334874068440388583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4038702029858004057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddf362198004a90489439c8d0c0357cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 6502439451784493806, guid: 6c76c521fa780664ba8da0e758fa0c66, type: 3}
+  detectionRadius: 5
+  points: 10
 --- !u!1 &4038702029858004059
 GameObject:
   m_ObjectHideFlags: 0
