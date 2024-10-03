@@ -1,11 +1,14 @@
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager instance;
-    public TMP_Text scoreText; // Cambiado a TMP_Text
+    public TMP_Text scoreText;
+    public TMP_Text highScoreText;
     private int score = 0;
+    private int highScore = 0;
 
     void Awake()
     {
@@ -19,10 +22,27 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        highScore = PlayerPrefs.GetInt("HighScore", 0);
+        highScoreText.text = "High Score: " + highScore.ToString();
+    }
+
+    void Update()
+    {
+        scoreText.text = " " + score.ToString();
+    }
+
     public void AddPoints(int points)
     {
         score += points;
-        scoreText.text = " " + score;
+        if (score > highScore)
+        {
+            highScore = score;
+            PlayerPrefs.SetInt("HighScore", highScore);
+            highScoreText.text = "High Score: " + highScore.ToString();
+        }
     }
 }
+
 
