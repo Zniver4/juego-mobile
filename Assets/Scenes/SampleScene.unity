@@ -1704,7 +1704,7 @@ MonoBehaviour:
   - {fileID: 6001071003197931631, guid: 77529227da8c9914b82949870fef5f73, type: 3}
   rightPosition: {fileID: 743925047}
   leftPosition: {fileID: 1540075733}
-  spawnInterval: 5
+  initialSpawnInterval: 5
 --- !u!4 &1616017125
 Transform:
   m_ObjectHideFlags: 0
@@ -2444,7 +2444,7 @@ PrefabInstance:
     - target: {fileID: 7834611451997791247, guid: 6c76c521fa780664ba8da0e758fa0c66,
         type: 3}
       propertyPath: velocidad
-      value: 0.5
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
