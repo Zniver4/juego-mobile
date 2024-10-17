@@ -7,12 +7,14 @@ public class PrefabSpawner : MonoBehaviour
     public List<GameObject> prefabsToSpawn;
     public Transform rightPosition;
     public Transform leftPosition;
-    public float spawnInterval = 5f; // Tiempo en segundos antes de que se destruya el objeto y se genere uno nuevo
-
+    public float initialSpawnInterval = 5f; // Tiempo inicial en segundos
+    private float spawnInterval;
     private GameObject currentObject;
+    private float timeMultiplier = 1f; // Multiplicador de tiempo
 
     void Start()
     {
+        spawnInterval = initialSpawnInterval;
         SpawnObject();
     }
 
@@ -34,6 +36,13 @@ public class PrefabSpawner : MonoBehaviour
 
         // Instanciar el prefab en la posición determinada
         currentObject = Instantiate(prefabToSpawn, spawnPosition.position, spawnPosition.rotation);
+
+        // Reducir el intervalo de spawn a medida que pasa el tiempo
+        timeMultiplier *= 0.95f; // Ajusta este valor según sea necesario
+        spawnInterval = initialSpawnInterval * timeMultiplier;
+
+        // Asegurarse de que el intervalo no sea menor a un mínimo definido
+        spawnInterval = Mathf.Max(spawnInterval, 1f); // Valor mínimo de intervalo
 
         // Llamar a SpawnObject nuevamente después de un intervalo de tiempo
         Invoke("SpawnObject", spawnInterval);
